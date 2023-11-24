@@ -1,0 +1,285 @@
+$border: 1px solid red;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0 auto;
+    background-color: black;
+    width: 100vw;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+    color: #331B07;
+    font-size: 1vw;
+    position: relative;
+
+    @media(max-width: 1366px) {
+        overflow-x: hidden;
+    }
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+    @media(max-width: 768px) {
+        position: relative;
+        height: 75px;
+        align-items: flex-start;
+        padding-left: 25px;
+    }
+
+    .nav-bg-mobile {
+        display: none;
+
+        @media(max-width: 768px) {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .logo-mobile {
+        display: none;
+
+        @media(max-width: 768px) {
+            position: absolute;
+            display: block;
+            width: 160px;
+            margin-top: 10px;
+        }
+    }
+
+    .btn-buy-now {
+        display: none;
+
+        @media(max-width: 768px) {
+            position: absolute;
+            display: block;
+            width: 90px;
+            height: 30px;
+            right: 25px;
+            top: calc(50% - 15px);
+            border: none;
+            border-radius: 13px;
+            background: url('../assets/img/gold-button-bg.jpg') 90% 35%;
+            color: #FAEFDD;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+    }
+
+
+    .nav-left,
+    .nav-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 32%;
+        overflow: hidden;
+        position: relative;
+
+        @media(max-width: 768px) {
+            display: none;
+        }
+
+        .nav-bg {
+            opacity: 0.2;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 98%;
+            z-index: -1;
+        }
+
+        .nav-border {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+
+
+            .nav-link {
+                color: #FAEFDD;
+                font-size: 21px;
+                letter-spacing: 1px;
+                text-decoration: none;
+                transition-duration: 0.2s;
+
+                &:hover {
+                    color: #E6C278;
+                    transform: scale(1.05);
+                }
+
+                @media (max-width: 1000px) {
+                    font-size: 16px;
+                }
+            }
+
+            .buy-now {
+                color: #FED075;
+
+                @keyframes example {
+                    from {
+                        box-shadow: 40px -70px 40px 20px #FED075;
+                    }
+
+                    to {
+                        box-shadow: 40px -70px 50px 40px #FED075;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    box-shadow: 30px -70px 40px 20px #FED075;
+                    animation-name: example;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+            }
+        }
+
+    }
+}
+
+#hero {
+    position: relative;
+    overflow: hidden;
+
+    #hero-video {
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    #hero-video-m {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .hero-front-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        top: 75px;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            top: 0%;
+        }
+
+        .corner-img {
+            width: 200px;
+            z-index: 100;
+
+            @media (max-width: 471px) {
+                width: 130px;
+            }
+        }
+
+        .hero-left-side,
+        .hero-right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 19%;
+
+            @media (max-width: 471px) {
+                width: 0%;
+            }
+
+
+            .game-of-the-year {
+                margin-left: 15%;
+
+                @media (max-width: 1000px) {
+                    width: 150%;
+                }
+
+                @media (max-width: 775px) {
+                    display: none;
+                }
+            }
+        }
+
+        .hero-right-side {
+            align-items: flex-end;
+
+            @media (min-width: 1660px) {
+                margin-right: 19px;
+            }
+        }
+
+        .hero-center-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: 1360px) {
+                align-items: flex-end;
+            }
+
+            @media (max-width: 471px) {
+                width: 100%;
+                align-items: center;
+            }
+
+
+            .hero-logo {
+                width: 62%;
+
+                @media (max-width: 1000px) {
+                    width: 90%;
+                }
+
+                @media (max-width: 775px) {
+                    margin-top: 50%;
+                    width: 80%;
+                }
+
+                @media (max-width: 471px) {
+                    width: 50%;
+                    margin-top: 25%;
+                    margin-left: 10%;
+                }
+            }
+        }
+
+    }
+}

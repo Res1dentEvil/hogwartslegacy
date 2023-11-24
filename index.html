@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Hogwarts Legacy</title>
+</head>
+
+<body>
+    <header>
+        <img class="nav-bg-mobile" src="./assets/img/mobile-nav-bg.jpg" alt="mobile-nav-bg">
+        <img class="logo-mobile" src="./assets/img/logo-680.jpg" alt="logo-mobile">
+        <button class="btn-buy-now">Buy Now</button>
+
+        <div class="nav-left">
+            <div class="nav-links">
+                <a class="nav-link" href="https://www.hogwartslegacy.com/en-us/media" target="_blank">
+                    Media
+                </a>
+                <a class="nav-link" href="https://www.hogwartslegacy.com/en-us/faq" target="_blank">
+                    FAQ
+                </a>
+                <a class="nav-link" href="https://www.hogwartslegacy.com/en-us/community" target="_blank">
+                    Community
+                </a>
+            </div>
+            <img class="nav-bg" src="./assets/img/nav-bar-bg-left.webp" alt="nav-left-bg">
+            <img class="nav-border" src="./assets/img/bar-left.png" alt="nav-left-border">
+
+        </div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a class="nav-link" href="https://account.wbgames.com/landing-page" target="_blank">
+                    Stay Connected
+                </a>
+                <a class="nav-link buy-now" href="https://www.hogwartslegacy.com/en-us/purchase" target="_blank">
+                    Buy Now
+                </a>
+            </div>
+            <img class="nav-bg" src="./assets/img/nav-bar-bg-right.webp" alt="nav-right-bg">
+            <img class="nav-border" src="./assets/img/bar-right.png" alt="nav-left-border">
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <video autoplay muted loop id="hero-video">
+                <source src="./assets/video/hero.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop id="hero-video-m">
+                <source src="./assets/video/hero-m.mp4" type="video/mp4">
+            </video>
+            <div class="hero-front-text">
+                <div class="hero-left-side">
+                    <img class="corner-img corner-left" src="./assets/img/corner-left.webp" alt="corner-left">
+                    <img class="game-of-the-year" src="./assets/img/fingerguns-m.webp" alt="fingerguns" width="350px">
+                </div>
+                <div
+                    class="hero-center-side wow animate__animated animate__zoomIn animate__slower	4s animate__delay-1s	1s">
+                    <img class="hero-logo" src="./assets/img/hero-logo.webp" alt="hero-logo">
+                </div>
+                <div class="hero-right-side"><img class="corner-img corner-right" src="./assets/img/corner-right.webp"
+                        alt="corner-right"></div>
+
+            </div>
+        </section>
+        <section id="trailer">
+
+        </section>
+        <section id="about"></section>
+        <section id="social"></section>
+    </main>
+    <footer>
+        <div></div>
+    </footer>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
