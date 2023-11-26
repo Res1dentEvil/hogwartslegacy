@@ -11,6 +11,7 @@ html {
 
 body {
     margin: 0 auto;
+    padding: 0;
     background-color: black;
     width: 100vw;
     overflow-x: hidden;
@@ -23,6 +24,15 @@ body {
         overflow-x: hidden;
     }
 }
+
+.visible-block {
+    display: block;
+}
+
+.invisible-block {
+    display: none;
+}
+
 
 header {
     position: absolute;
@@ -173,8 +183,23 @@ header {
 #hero {
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+
+    @media (max-width: 768px) {
+        min-height: 90vh;
+    }
+
+    @media (max-width: 750px) {
+        min-height: 60vh;
+    }
+
+    @media (max-width: 500px) {
+        min-height: 50vh;
+    }
+
 
     #hero-video {
+        margin: -5px;
 
         @media (max-width: 768px) {
             display: none;
@@ -199,6 +224,7 @@ header {
         width: 100%;
         height: 100%;
 
+
         @media (max-width: 768px) {
             top: 0%;
         }
@@ -218,6 +244,7 @@ header {
             flex-direction: column;
             justify-content: flex-start;
             width: 19%;
+
 
             @media (max-width: 471px) {
                 width: 0%;
@@ -282,4 +309,190 @@ header {
         }
 
     }
+}
+
+
+
+
+#about {
+    position: relative;
+
+    .about-bg-img {
+        box-shadow: 0px -5px 150px 90px #0F1616;
+    }
+
+    .video-container {
+        position: absolute;
+        z-index: 2;
+        top: -40px;
+        left: calc(50% - 1200px / 2);
+        width: 1200px;
+        height: 700px;
+
+        @media (max-width: 1270px) {
+            top: 80px;
+            left: calc(50% - 800px / 2);
+            width: 800px;
+            height: 472px;
+        }
+
+        @media (max-width: 830px) {
+            top: -40px;
+            left: calc(50% - 470px / 2);
+            width: 470px;
+            height: 272px;
+        }
+
+        @media (max-width: 500px) {
+            top: -10px;
+            left: calc(50% - 390px / 2);
+            width: 390px;
+            height: 232px;
+        }
+
+        .video-frame-border {
+            position: absolute;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .video-frame {
+            position: absolute;
+            width: 96%;
+            height: 93%;
+            top: 3%;
+            left: 2%;
+
+            @media (max-width: 1270px) {
+                height: 440px;
+            }
+
+            @media (max-width: 830px) {
+                height: 258px;
+            }
+
+            @media (max-width: 500px) {
+                height: 212px;
+            }
+
+
+        }
+
+        .video-frame-img {
+            position: absolute;
+            width: 96%;
+            height: 93%;
+            top: 3%;
+            left: 2%;
+            z-index: 0;
+        }
+
+
+        .play-button-group {
+            position: absolute;
+            top: calc(50% - 170px / 2);
+            left: calc(50% - 170px / 2);
+            width: 170px;
+            height: 170px;
+            z-index: 4;
+
+            @media (max-width: 1270px) {
+                top: calc(50% - 170px / 2);
+                left: calc(50% - 170px / 2);
+            }
+
+
+
+            .hover-mask {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            @keyframes play-animation-outer {
+
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(90deg);
+                }
+            }
+
+            @keyframes play-animation-outer-end {
+
+                from {
+                    transform: rotate(90deg);
+                }
+
+                to {
+                    transform: rotate(0deg);
+                }
+            }
+
+            .outer-btn-play-animation-start {
+                animation-name: play-animation-outer;
+                animation-duration: 0.5s;
+                animation-fill-mode: both;
+            }
+
+            .outer-btn-play-animation-end {
+                animation-name: play-animation-outer-end;
+                animation-duration: 0.5s;
+                animation-fill-mode: both;
+            }
+
+            @keyframes play-animation-inner {
+
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(-50deg);
+                }
+            }
+
+            @keyframes play-animation-inner-end {
+
+                from {
+                    transform: rotate(-50deg);
+                }
+
+                to {
+                    transform: rotate(0deg);
+                }
+            }
+
+            .inner-btn-play-animation-start {
+                animation-name: play-animation-inner;
+                animation-duration: 0.5s;
+                animation-fill-mode: both;
+            }
+
+            .inner-btn-play-animation-end {
+                animation-name: play-animation-inner-end;
+                animation-duration: 0.5s;
+                animation-fill-mode: both;
+            }
+
+            img {
+                position: absolute;
+            }
+
+            .play-button-arrow {
+                width: 55px;
+                left: calc(50% - 40px / 2);
+                top: calc(50% - 65px / 2);
+            }
+
+        }
+    }
+
 }

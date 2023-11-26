@@ -10,6 +10,7 @@ html {
 
 body {
   margin: 0 auto;
+  padding: 0;
   background-color: black;
   width: 100vw;
   overflow-x: hidden;
@@ -22,6 +23,14 @@ body {
   body {
     overflow-x: hidden;
   }
+}
+
+.visible-block {
+  display: block;
+}
+
+.invisible-block {
+  display: none;
 }
 
 header {
@@ -217,6 +226,25 @@ header .nav-right .nav-links .buy-now::before {
 #hero {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+}
+@media (max-width: 768px) {
+  #hero {
+    min-height: 90vh;
+  }
+}
+@media (max-width: 750px) {
+  #hero {
+    min-height: 60vh;
+  }
+}
+@media (max-width: 500px) {
+  #hero {
+    min-height: 50vh;
+  }
+}
+#hero #hero-video {
+  margin: -5px;
 }
 @media (max-width: 768px) {
   #hero #hero-video {
@@ -358,4 +386,222 @@ header .nav-right .nav-links .buy-now::before {
     margin-top: 25%;
     margin-left: 10%;
   }
+}
+
+#about {
+  position: relative;
+}
+#about .about-bg-img {
+  -webkit-box-shadow: 0px -5px 150px 90px #0F1616;
+          box-shadow: 0px -5px 150px 90px #0F1616;
+}
+#about .video-container {
+  position: absolute;
+  z-index: 2;
+  top: -40px;
+  left: calc(50% - 600px);
+  width: 1200px;
+  height: 700px;
+}
+@media (max-width: 1270px) {
+  #about .video-container {
+    top: 80px;
+    left: calc(50% - 400px);
+    width: 800px;
+    height: 472px;
+  }
+}
+@media (max-width: 830px) {
+  #about .video-container {
+    top: -40px;
+    left: calc(50% - 235px);
+    width: 470px;
+    height: 272px;
+  }
+}
+@media (max-width: 500px) {
+  #about .video-container {
+    top: -10px;
+    left: calc(50% - 195px);
+    width: 390px;
+    height: 232px;
+  }
+}
+#about .video-container .video-frame-border {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+#about .video-container .video-frame {
+  position: absolute;
+  width: 96%;
+  height: 93%;
+  top: 3%;
+  left: 2%;
+}
+@media (max-width: 1270px) {
+  #about .video-container .video-frame {
+    height: 440px;
+  }
+}
+@media (max-width: 830px) {
+  #about .video-container .video-frame {
+    height: 258px;
+  }
+}
+@media (max-width: 500px) {
+  #about .video-container .video-frame {
+    height: 212px;
+  }
+}
+#about .video-container .video-frame-img {
+  position: absolute;
+  width: 96%;
+  height: 93%;
+  top: 3%;
+  left: 2%;
+  z-index: 0;
+}
+#about .video-container .play-button-group {
+  position: absolute;
+  top: calc(50% - 85px);
+  left: calc(50% - 85px);
+  width: 170px;
+  height: 170px;
+  z-index: 4;
+}
+@media (max-width: 1270px) {
+  #about .video-container .play-button-group {
+    top: calc(50% - 85px);
+    left: calc(50% - 85px);
+  }
+}
+#about .video-container .play-button-group .hover-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#about .video-container .play-button-group .hover-mask:hover {
+  cursor: pointer;
+}
+@-webkit-keyframes play-animation-outer {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+@keyframes play-animation-outer {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes play-animation-outer-end {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes play-animation-outer-end {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+#about .video-container .play-button-group .outer-btn-play-animation-start {
+  -webkit-animation-name: play-animation-outer;
+          animation-name: play-animation-outer;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+#about .video-container .play-button-group .outer-btn-play-animation-end {
+  -webkit-animation-name: play-animation-outer-end;
+          animation-name: play-animation-outer-end;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes play-animation-inner {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+  }
+}
+@keyframes play-animation-inner {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+  }
+}
+@-webkit-keyframes play-animation-inner-end {
+  from {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes play-animation-inner-end {
+  from {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+#about .video-container .play-button-group .inner-btn-play-animation-start {
+  -webkit-animation-name: play-animation-inner;
+          animation-name: play-animation-inner;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+#about .video-container .play-button-group .inner-btn-play-animation-end {
+  -webkit-animation-name: play-animation-inner-end;
+          animation-name: play-animation-inner-end;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+#about .video-container .play-button-group img {
+  position: absolute;
+}
+#about .video-container .play-button-group .play-button-arrow {
+  width: 55px;
+  left: calc(50% - 20px);
+  top: calc(50% - 32.5px);
 }
