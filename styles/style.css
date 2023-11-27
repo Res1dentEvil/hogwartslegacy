@@ -326,7 +326,7 @@ header .nav-right .nav-links .buy-now::before {
   width: 200px;
   z-index: 4;
 }
-@media (max-width: 471px) {
+@media (max-width: 500px) {
   #hero .hero-front-text .corner-img {
     width: 130px;
   }
