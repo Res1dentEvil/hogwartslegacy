@@ -25,8 +25,40 @@ body {
     }
 }
 
-.visible-block {
-    display: block;
+.modal-video-shadow {
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+    opacity   : 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .video-frame {
+        width: 896px;
+        height: 504px;
+        top: 3%;
+        left: 2%;
+        box-shadow: #dfb76c70 0px 0px 55px;
+
+        @media (max-width: 1270px) {
+            width: 560px;
+            height: 315px;
+        }
+
+        @media (max-width: 830px) {
+            width: 392px;
+            height: 220px;
+        }
+    }
 }
 
 .invisible-block {
@@ -194,7 +226,7 @@ header {
     }
 
     @media (max-width: 500px) {
-        min-height: 50vh;
+        min-height: 0vh;
     }
 
 
@@ -231,7 +263,7 @@ header {
 
         .corner-img {
             width: 200px;
-            z-index: 100;
+            z-index: 4;
 
             @media (max-width: 471px) {
                 width: 130px;
@@ -321,6 +353,8 @@ header {
         box-shadow: 0px -5px 150px 90px #0F1616;
     }
 
+
+
     .video-container {
         position: absolute;
         z-index: 2;
@@ -344,38 +378,16 @@ header {
         }
 
         @media (max-width: 500px) {
-            top: -10px;
-            left: calc(50% - 390px / 2);
-            width: 390px;
-            height: 232px;
+            top: -5px;
+            left: calc(50% - 370px / 2);
+            width: 370px;
+            height: 220px;
         }
 
         .video-frame-border {
             position: absolute;
             width: 100%;
             z-index: 3;
-        }
-
-        .video-frame {
-            position: absolute;
-            width: 96%;
-            height: 93%;
-            top: 3%;
-            left: 2%;
-
-            @media (max-width: 1270px) {
-                height: 440px;
-            }
-
-            @media (max-width: 830px) {
-                height: 258px;
-            }
-
-            @media (max-width: 500px) {
-                height: 212px;
-            }
-
-
         }
 
         .video-frame-img {
@@ -490,6 +502,12 @@ header {
                 width: 55px;
                 left: calc(50% - 40px / 2);
                 top: calc(50% - 65px / 2);
+            }
+
+            .play-button-outer, .play-button-inner {
+                @media (max-width: 500px) {
+                    display: none;
+                }
             }
 
         }
