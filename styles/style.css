@@ -429,12 +429,14 @@ header .nav-right .nav-links .buy-now::before {
   }
 }
 
+/***************about****************/
 #about {
   position: relative;
 }
 #about .about-bg-img {
   -webkit-box-shadow: 0px -5px 150px 90px #0F1616;
           box-shadow: 0px -5px 150px 90px #0F1616;
+  height: 200vh;
 }
 #about .video-container {
   position: absolute;
@@ -625,7 +627,241 @@ header .nav-right .nav-links .buy-now::before {
   top: calc(50% - 32.5px);
 }
 @media (max-width: 500px) {
-  #about .video-container .play-button-group .play-button-outer, #about .video-container .play-button-group .play-button-inner {
+  #about .video-container .play-button-group .play-button-outer,
+  #about .video-container .play-button-group .play-button-inner {
     display: none;
+  }
+}
+#about .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 700px;
+  width: 1200px;
+  left: calc(50% - 600px);
+}
+@media (max-width: 1300px) {
+  #about .description {
+    top: 580px;
+    width: 900px;
+    left: calc(50% - 450px);
+  }
+}
+@media (max-width: 831px) {
+  #about .description {
+    top: 280px;
+    width: 900px;
+    left: calc(50% - 450px);
+  }
+}
+#about .description .description-p {
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: white;
+  width: 73%;
+}
+@media (max-width: 1300px) {
+  #about .description .description-p {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  #about .description .description-p {
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 21px;
+    width: 400px;
+  }
+}
+#about .description .description-title {
+  margin-top: 25px;
+  margin-bottom: 60px;
+  width: 56%;
+}
+@media (max-width: 800px) {
+  #about .description .description-title {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 38%;
+  }
+}
+#about .description .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards {
+    gap: 4%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  #about .description .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 25px;
+  }
+}
+#about .description .cards .card {
+  position: relative;
+}
+#about .description .cards .card .game-info-frame {
+  width: 370px;
+  height: 480px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards .card .game-info-frame {
+    width: 233px;
+    height: 302px;
+  }
+}
+#about .description .cards .card .game-info-panel-container {
+  position: absolute;
+  top: calc(50% - 170.5px);
+  left: calc(50% - 149px);
+  width: 295px;
+  height: 295px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards .card .game-info-panel-container {
+    top: calc(50% - 106.5px);
+    left: calc(50% - 94px);
+    width: 185px;
+    height: 185px;
+  }
+}
+#about .description .cards .card .game-info-panel-container .game-info-panel {
+  width: 100%;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+#about .description .cards .card .game-info-icon-1,
+#about .description .cards .card .game-info-icon-2 {
+  position: absolute;
+  width: 60px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards .card .game-info-icon-1,
+  #about .description .cards .card .game-info-icon-2 {
+    width: 35px;
+  }
+}
+#about .description .cards .card .game-info-icon-1 {
+  top: 29px;
+  left: 271px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards .card .game-info-icon-1 {
+    top: 20px;
+    left: 172px;
+  }
+}
+#about .description .cards .card .game-info-icon-2 {
+  bottom: 33px;
+  right: 274.5px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards .card .game-info-icon-2 {
+    bottom: 23px;
+    right: 174px;
+  }
+}
+#about .description .cards-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+  margin-top: 25px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards-description {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  #about .description .cards-description {
+    display: none;
+  }
+}
+#about .description .cards-description .card-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 370px;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: white;
+  height: 245px;
+}
+@media (max-width: 1300px) {
+  #about .description .cards-description .card-description {
+    width: 233px;
+    font-size: 15px;
+    line-height: 23px;
+    color: white;
+    height: 245px;
+  }
+}
+#about .description .cards-description .card-description .card-title {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 25px;
+  line-height: 30.2px;
+  text-align: center;
+}
+@media (max-width: 1300px) {
+  #about .description .cards-description .card-description .card-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+#about .description .cards-description .card-description .card-p {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 21.6px;
+  height: 65%;
+}
+@media (max-width: 1300px) {
+  #about .description .cards-description .card-description .card-p {
+    font-size: 14px;
   }
 }
