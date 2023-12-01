@@ -436,7 +436,12 @@ header .nav-right .nav-links .buy-now::before {
 #about .about-bg-img {
   -webkit-box-shadow: 0px -5px 150px 90px #0F1616;
           box-shadow: 0px -5px 150px 90px #0F1616;
-  height: 200vh;
+  height: 1900px;
+}
+@media (max-width: 471px) {
+  #about .about-bg-img {
+    height: 1800px;
+  }
 }
 #about .video-container {
   position: absolute;
@@ -863,5 +868,174 @@ header .nav-right .nav-links .buy-now::before {
 @media (max-width: 1300px) {
   #about .description .cards-description .card-description .card-p {
     font-size: 14px;
+  }
+}
+#about .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  margin-top: 40px;
+}
+#about .social .rule-a {
+  width: 100%;
+}
+@media (max-width: 470px) {
+  #about .social .rule-a {
+    width: 85%;
+  }
+}
+#about .social .social-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7%;
+}
+#about .social .social-logos svg {
+  width: 50px;
+}
+
+footer {
+  position: relative;
+  height: 388px;
+  -webkit-box-shadow: 0px -5px 150px 90px #000000;
+          box-shadow: 0px -5px 150px 90px #000000;
+}
+footer .sponsors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+footer .sponsors .sponsor-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8%;
+  margin-top: 120px;
+  width: 40%;
+}
+footer .sponsors .sponsor-icons .sponsor-icon {
+  width: 90px;
+}
+footer .sponsors .sponsor-icons .sponsor-icon:first-child {
+  width: 55px;
+}
+footer .sponsors .sponsor-icons .sponsor-icon:nth-child(2) {
+  width: 145px;
+}
+@media (max-width: 470px) {
+  footer .sponsors .sponsor-icons .sponsor-icon:nth-child(2) {
+    display: none;
+  }
+}
+footer .corners {
+  width: 100%;
+}
+footer .corners .corner-bottom-left {
+  position: absolute;
+  width: 200px;
+}
+footer .corners .corner-bottom-right {
+  position: absolute;
+  width: 200px;
+  right: 0;
+  margin-right: 19px;
+}
+@media (max-width: 470px) {
+  footer .corners .corner-bottom-right {
+    margin-right: 0px;
+  }
+}
+footer .corners .my-contacts {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 75px);
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@-webkit-keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+footer .corners .my-contacts .gradient {
+  margin: 5px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #7953cd), color-stop(30%, #00affa), color-stop(70%, #0190cd), color-stop(80%, #764ada));
+  background: linear-gradient(to right, #7953cd 20%, #00affa 30%, #0190cd 70%, #764ada 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  -webkit-animation: textShine 5s ease-in-out infinite alternate;
+          animation: textShine 5s ease-in-out infinite alternate;
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 470px) {
+  footer .corners .my-contacts {
+    bottom: 20px;
+  }
+  footer .corners .my-contacts .gradient {
+    font-size: 18px;
   }
 }
